@@ -1,5 +1,5 @@
-Template.projects.helpers({
-  projects : function () {
-    return Projects.find();
+Template.people.helpers({
+  people : function () {
+    return People.find();
   }
 });

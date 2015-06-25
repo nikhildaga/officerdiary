@@ -1,5 +1,5 @@
-Template.cases.helpers({
-  cases : function () {
-    return Cases.find();
+Template.projects.helpers({
+  projects : function () {
+    return Projects.find();
   }
 });

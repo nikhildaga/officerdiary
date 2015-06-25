@@ -1,5 +1,5 @@
-Template.cases.helpers({
-  cases : function () {
+Template.notes.helpers({
+  notes : function () {
     return Cases.find();
   }
 });
