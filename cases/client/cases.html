@@ -1,0 +1,7 @@
+<template name="cases">
+  {{> quickForm collection="Cases" id="insertCasesForm" type="insert"}}
+
+  {{#each cases}}
+    {{name}}
+  {{/each}}
+</template>
