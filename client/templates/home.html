@@ -1,3 +1,9 @@
 <template name="home">
 
+  {{> quickForm collection="Projects" id="insertProjectForm" type="insert"}}
+
+{{#each projects }}
+
+{{name}}
+{{/each}}
 </template>
