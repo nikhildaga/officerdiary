@@ -1,9 +1,7 @@
 <template name="home">
-
-  {{> quickForm collection="Projects" id="insertProjectForm" type="insert"}}
-
-{{#each projects }}
-
-{{name}}
-{{/each}}
+  <div class="col-md-2 text-center"><a href="/cases"><i class='fa fa-3x fa-files-o'></i> <br> <span>Cases</span></a></div>
+  <div class="col-md-2 text-center"><a href="/notes"><i class='fa fa-3x fa-pencil-square-o'></i> <br> <span>Notes</span></a></div>
+  <div class="col-md-2 text-center"><a href="/people"><i class='fa fa-3x fa-user'></i> <br> <span>People</span></a></div>
+  <div class="col-md-2 text-center"><a href="/projects"><i class='fa fa-3x fa-star'></i> <br> <span>Projects</span></a></div>
+  <div class="col-md-2 text-center"><a href="/tasks"><i class='fa fa-3x fa-tasks'></i> <br> <span>Tasks</span></a></div>
 </template>
