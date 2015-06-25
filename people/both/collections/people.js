@@ -23,17 +23,19 @@ People.attachSchema(new SimpleSchema({
   location: {
     type: String,
     autoform: {
-      type: 'map',
       afFieldInput: {
-        searchBox: true
+        type: 'map',
+        searchBox: true,
+        mapType: 'terrain'
       }
     }
   },
   positionData: {
     type: String,
     autoform: {
-      type: 'map',
       afFieldInput: {
+        type: 'map',
+        mapType: 'terrain',
         searchBox: true,
         geolocation: true,
         autolocate: true
