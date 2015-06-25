@@ -1,8 +1,14 @@
 Router.configure({
-  layoutTemplate: 'layout',
+  layoutTemplate: function () {
+    if (Meteor.userId()) {
+      return 'layout'
+    } else {
+      return 'guestLayout'
+    }
+  }
 });
 
-Router.route('/', function () {
+Router.route('/', function() {
   this.render('home');
 });
 
@@ -12,3 +18,5 @@ Router.route('/notes');
 Router.route('/people');
 Router.route('/projects');
 Router.route('/tasks');
+
+AccountsTemplates.configureRoute('signIn');
