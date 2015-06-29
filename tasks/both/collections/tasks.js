@@ -45,8 +45,7 @@ Tasks.attachSchema(new SimpleSchema({
         type: 'map',
         mapType: 'hybrid',
         searchBox: true,
-        geolocation: true,
-        autolocate: true
+        geolocation: true
       }
     }
   }
