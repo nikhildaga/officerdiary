@@ -1,4 +1,4 @@
-Template.map.onCreated(function() {
+Template.tasksmap.onCreated(function() {
   GoogleMaps.ready('map', function(map) {
 /*
     google.maps.event.addListener(map.instance, 'click', function(event) {
@@ -26,11 +26,7 @@ Template.map.onCreated(function() {
   });
 });
 
-Meteor.startup(function() {
-  GoogleMaps.load();
-});
-
-Template.map.helpers({
+Template.tasksmap.helpers({
   mapOptions: function() {
     if (GoogleMaps.loaded()) {
       return {
