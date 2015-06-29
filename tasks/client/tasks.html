@@ -1,5 +1,9 @@
 <template name="tasks">
-  <h3> Tasks </h3> {{> quickForm collection="Tasks" id="insertTaskForm" type="insert" omitFields="owner,createdAt"}}
+  <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Create Task </button>
+  <div class="collapse" id="collapseExample"> {{> quickForm collection="Tasks" id="insertTaskForm" type="insert" omitFields="owner,createdAt"}} </div>
+  <br>
+  <br>
+
   <ul class="todo-list ui-sortable"> {{#each tasks}}
     <li>
       <!-- drag handle -->
@@ -13,7 +17,6 @@
       <span class="label label-info"><i class="fa fa-user"></i> {{assignedTo}}</span>
       <span class="label label-info"><i class="fa fa-cogs"></i> {{complexity}}</span>
       <span class="label label-info"><i class="fa fa-map-marker"></i> {{location}}</span>
-
       <!-- General tools such as edit or delete-->
       <div class="tools"> <i class="fa fa-edit"></i> <i class="fa fa-trash-o"></i> </div>
     </li> {{/each}} </ul>
