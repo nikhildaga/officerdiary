@@ -16,7 +16,6 @@ Template.layout.rendered = function() {
         $(".content-wrapper, .right-side").css('min-height', sidebar_height);
         postSetWidth = sidebar_height;
       }
-
     }
   $('.sidebar-toggle').each(function() {
     var group = $(this);

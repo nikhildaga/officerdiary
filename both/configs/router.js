@@ -1,5 +1,5 @@
 Router.configure({
-  layoutTemplate: function () {
+ layoutTemplate: function() {
     if (Meteor.userId()) {
       return 'layout'
     } else {

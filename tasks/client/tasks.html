@@ -1,11 +1,20 @@
 <template name="tasks">
-  <h3>
-    Tasks
-  </h3>
-  
-  {{> quickForm collection="Tasks" id="insertTaskForm" type="insert"}}
+  <h3> Tasks </h3> {{> quickForm collection="Tasks" id="insertTaskForm" type="insert" omitFields="owner,createdAt"}}
+  <ul class="todo-list ui-sortable"> {{#each tasks}}
+    <li>
+      <!-- drag handle -->
+      <span class="handle ui-sortable-handle"> <i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> </span>
+      <!-- checkbox -->
+      <input type="checkbox" value="" name="">
+      <!-- todo text -->
+      <span class="text">{{title}}</span>
+      <!-- Emphasis label -->
+      <span class="label label-danger"><i class="fa fa-clock-o"></i> {{dueDate}}</span>
+      <span class="label label-info"><i class="fa fa-user"></i> {{assignedTo}}</span>
+      <span class="label label-info"><i class="fa fa-cogs"></i> {{complexity}}</span>
+      <span class="label label-info"><i class="fa fa-map-marker"></i> {{location}}</span>
 
-  {{#each tasks}}
-    {{name}}
-  {{/each}}
+      <!-- General tools such as edit or delete-->
+      <div class="tools"> <i class="fa fa-edit"></i> <i class="fa fa-trash-o"></i> </div>
+    </li> {{/each}} </ul>
 </template>

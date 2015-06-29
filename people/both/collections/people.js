@@ -26,7 +26,7 @@ People.attachSchema(new SimpleSchema({
       afFieldInput: {
         type: 'map',
         searchBox: true,
-        mapType: 'terrain'
+        mapType: 'hybrid'
       }
     }
   },
@@ -35,7 +35,7 @@ People.attachSchema(new SimpleSchema({
     autoform: {
       afFieldInput: {
         type: 'map',
-        mapType: 'terrain',
+        mapType: 'hybrid',
         searchBox: true,
         geolocation: true,
         autolocate: true
